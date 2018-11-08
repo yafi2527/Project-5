@@ -13,13 +13,16 @@ import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.comp
 import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
 //tambah code berikut (3)
 import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
-import{DropdownDirective} from './shared/dropdown.directive';
+import { FooterComponent } from './footer/footer.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RecipeComponent,
     ShoppingListComponent,
+
     
     //tambah code berikut
     RecipeListComponent,
@@ -28,12 +31,14 @@ import{DropdownDirective} from './shared/dropdown.directive';
     RecipeItemComponent,
     //tambahkan code berikut (3)
     ShoppingEditComponent,
+
     DropdownDirective
-  ],
+
+],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
