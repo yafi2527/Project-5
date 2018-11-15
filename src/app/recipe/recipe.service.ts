@@ -34,6 +34,9 @@ export class RecipeService {
   addIngredientsShoppingList(ingredients: Ingredient[]){
     this.slsService.addIngredients(ingredients);
   }
+  getRecipe(index:number){
+    return this.recipes [index];
+  }
   //tambahkan parameter pada construktor
 constructor(private slsService: ShoppingListService) { }
 
